@@ -12,11 +12,11 @@ This project was created and published by me as part of my learnings at Lighthou
 
 **Install it:**
 
-`npm install Fe7Fe@/lotide`
+`npm install @Fe7Fe/lotide`
 
 **Require it:**
 
-`const _ = require('Fe7Fe@/lotide');`
+`const _ = require('@Fe7Fe/lotide');`
 
 **Call it:**
 
