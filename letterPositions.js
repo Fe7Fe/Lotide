@@ -1,24 +1,15 @@
-const assertEqual = function(actual, expected) {
-  if (actual === expected) {
-    console.log("✅ ✅ ✅   Assertion passed: ${actual} === ${expected}");
-  } else {
-    console.log("🛑 🛑 🛑  Assertion failed: ${actual} !== ${expected}");
-  }
-};
-
 const letterPositions = function(sentence) {
-  const results = {};
-  for (let i = 0; i < sentence.length; i++) {
-    let character = sentence.charAt(i);
-    if (character !== " ") {
-      if (results[character]) {
-        results[character].push(i);
-      } else {
-        results[character] = [i];
-      }
+  const result = {};
+  sentence = sentence.split(" ").join("");
+
+  for (let l = 0; l < sentence.length; l++) {
+    if (result[sentence[l]]) {
+      result[sentence[l]].push(l);
+    } else {
+      result[sentence[l]] = [l];
     }
   }
-  return results;
+  return result;
 };
 
-console.log(letterPositions("lighthouse in the house"));
+module.exports = letterPositions;
